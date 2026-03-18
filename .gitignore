@@ -1,0 +1,59 @@
+# =========================
+# ENV (important)
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Backend (Node + TS)
+# =========================
+backend/node_modules/
+backend/dist/
+backend/build/
+backend/*.log
+backend/*.tsbuildinfo
+
+# =========================
+# Frontend (React)
+# =========================
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.vite/
+frontend/.next/
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# Docker
+# =========================
+docker-compose.override.yml
+
+# =========================
+# Drizzle (safe ignore)
+# =========================
+backend/drizzle/*.db
+backend/drizzle/*.sqlite
+
+# =========================
+# Misc
+# =========================
+coverage/
+.tmp/
