@@ -4,11 +4,11 @@ services:
     container_name: ura_postgres
     restart: unless-stopped
     environment:
-      POSTGRES_USER: ura_user
-      POSTGRES_PASSWORD: ura_pass
-      POSTGRES_DB: ura_system
+      POSTGRES_USER: postgres
+      POSTGRES_HOST_AUTH_METHOD: trust
+      POSTGRES_DB: uras
     ports:
-      - "5433:5432"
+      - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
 
