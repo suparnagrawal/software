@@ -1,3 +1,4 @@
+console.log("SERVER STARTING...");
 import "./config/env"; // MUST be first — loads process.env before any module
 
 import express from "express";
@@ -49,6 +50,7 @@ async function startServer() {
     process.exit(1);
   }
 
+  console.log("About to listen....");
   app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
   });
