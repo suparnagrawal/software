@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node -r ts-node/register src/server.ts",
-    "seed": "node -r ts-node/register src/db/seed.ts",
-    "setup": "node -r ts-node/register scripts/setup.ts"
+    "dev": "kill-port 5000 && ts-node src/server.ts",
+    "seed": "kill-port 5000 && ts-node src/db/seed.ts",
+    "setup": "kill-port 5000 && ts-node scripts/setup.ts"
   },
   "keywords": [],
   "author": "",
@@ -30,6 +30,7 @@
     "@types/node": "^25.5.0",
     "@types/pg": "^8.18.0",
     "drizzle-kit": "^0.31.10",
+    "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.3"
   }
